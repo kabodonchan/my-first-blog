@@ -1,14 +1,20 @@
+15 lines (14 sloc) 326 Bytes
 <html>
-    <head>
-        <title>Donchan blog</title>
-    </head>
-    <body>
-      {% for post in posts %}
+
+   <head>
+       <title>Donchan blog</title>
+   </head>
+
+   <body>
+     <div>
+       <h1><a href="">Django Donchan Blog</a></h1>
+     </div>
+     {% for post in posts %}
         <div>
           <p>published: {{ post.published_date }}</p>
           <h1><a href="">{{ post.title }}</a></h1>
           <p>{{ post.text|linebreaksbr }}</p>
         </div>
       {% endfor %}
-    </body>
+   </body>
 </html>
